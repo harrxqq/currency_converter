@@ -45,10 +45,11 @@ def convert_currency():
     result_label.config(
         text=f"{amount} {rates[from_currency]['name']} = {converted_amount} {rates[to_currency]['name']}")
 
-
+# Создание главного окна
 root = tk.Tk()
 root.title("Конвертер валют")
 
+# Создание и настройка виджетов
 amount_label = tk.Label(root, text="Сумма:")
 amount_label.grid(row=0, column=0)
 
@@ -77,4 +78,5 @@ convert_button.grid(row=3, column=0, columnspan=2)
 result_label = tk.Label(root, text="")
 result_label.grid(row=4, column=0, columnspan=2)
 
+# Запуск главного цикла обработки событий
 root.mainloop()
